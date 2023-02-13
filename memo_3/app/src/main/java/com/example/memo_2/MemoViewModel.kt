@@ -21,7 +21,7 @@ class MemoViewModel(application: Application):AndroidViewModel(application) {
     val db = RoomHelper.getDatabase(context)
 
     fun getData() = viewModelScope.launch(Dispatchers.IO) {
-        _memoList.value= null
+//        _memoList.value= null
         _memoList.postValue(db.memoDa0().getAll())
 
     }
@@ -31,11 +31,11 @@ class MemoViewModel(application: Application):AndroidViewModel(application) {
         db.memoDa0().insert(memo)
     }
 
-//    fun removeData() = viewModelScope.launch(Dispatchers.IO) {
-//        //레포지 쓰기전
-//        db.memoDa0().deleteAllData()
-//
-//    }
+    fun removeData() = viewModelScope.launch(Dispatchers.IO) {
+        //레포지 쓰기전
+        db.memoDa0().deleteAllData()
+
+    }
 
 
 

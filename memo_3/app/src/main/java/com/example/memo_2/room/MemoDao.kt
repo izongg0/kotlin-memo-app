@@ -7,7 +7,7 @@ interface MemoDao {
     @Query("select * from memo_tb")
     fun getAll() : List<MemoEntity> // 전체조회
 
-    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    @Insert(onConflict = OnConflictStrategy.IGNORE)
     fun insert(memo: MemoEntity)
 
     @Delete
@@ -15,6 +15,7 @@ interface MemoDao {
 
     @Query("DELETE FROM memo_tb")
     fun deleteAllData()
+
 //    @Query("DELETE FROM room_memo WHERE no = :userId")
 //    fun deleteByUserId(userId: Long)
 
