@@ -22,3 +22,10 @@ RecyclerView에 데이터를 불러올 때 LiveData가 잘 동기화 되지 않�
 Insert하는 순간 하나의 데이터가 쌓여서 들어가는(?) 거 같다. <br>
 RecyclerView에 데이터를 불러올 때 LiveData를 초기화하고 불러오는 과정이 필요할거 같다.
 
+## 4차 시도
+
+Room, ViewBinding, ViewModel, LiveData, ViewModelScope 를 사용하여 한 페이지 내부에서 메모기능이 작동하도록 구현 성공하였다.<br>
+3차시도에서 데이터가 한번에 여러 개 들어가는 것은 LiveData Observe 문제였다. <br>
+쓰레드를 잘 활용한게 맞는건지 잘 모르겠지만 이제 한 화면이 아닌 <br>
+Fragment를 만들어 Fragment에서 입력한 데이터가 MainActivity의 RecyclerView에 들어가도록 구현해보려고 한다.
+
