@@ -1,0 +1,65 @@
+package com.example.memo_2
+
+import android.content.Context
+import android.os.Bundle
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.memo_2.databinding.ActivityMainBinding
+import com.example.memo_2.databinding.FragmentMainBinding
+
+
+class MainFragment : Fragment() {
+
+    val binding by lazy { FragmentMainBinding.inflate(layoutInflater) }
+    lateinit var viewModel:MemoViewModel
+
+
+    lateinit var mainActivity: MainActivity
+
+    override fun onAttach(context: Context) {
+        super.onAttach(context)
+
+        // 2. Context를 액티비티로 형변환해서 할당
+        mainActivity = context as MainActivity
+    }
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+    }
+
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+
+
+        viewModel = ViewModelProvider(this).get(MemoViewModel::class.java)
+        viewModel.getData()
+
+        viewModel.memoList.observe(viewLifecycleOwner,{
+            viewModel.memoList
+            viewModel.getData()
+            val memoAdapter = MemoAdapter(it)
+
+            binding.rv.adapter = memoAdapter
+            binding.rv.layoutManager = LinearLayoutManager(mainActivity)
+        })
+
+
+        binding.addmemo.setOnClickListener {
+
+            Navigation.findNavController(binding.root).navigate(R.id.action_mainFragment_to_editFragment)
+
+        }
+
+        return binding.root
+    }
+
+
+}
