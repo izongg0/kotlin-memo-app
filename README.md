@@ -36,3 +36,10 @@ EditFragment에서 입력한 데이터가 MainFragment의 RecyclerView에 들어
 이제 MainFragment에 있는 RecyclerView의 아이템을 클릭할 시에 그 메모의 내용을 다른 Fragment에서 보여주도록 
 RecyclerView Adapter에서 ClickEvent를 구현해보도록 하겠다.
 
+## 6차
+
+RecyclerView는 ClickEvent를 가지고 있지 않아서 따로 만들어주어야 한다. <br>
+만들었는데 잘 작동되지 않는다. 그래서 2차때 했던 ViewModel 과 LiveData를 사용하지 않았을 때의 프로젝트 파일에 <br>
+적용 해보았는데 잘 작동한다. 그래서 문제는 ViewModel 과 LiveData를 사용한 RecyclerView에 ClickEvent를 적용하는데에서 문제가 있는 것 같다.<br>
+검색을 해보아도 예제가 잘 보이지않아서 혼자 해봐야 할 것같다. 
+
