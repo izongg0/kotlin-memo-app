@@ -27,7 +27,6 @@ class MemoViewModel(application: Application):AndroidViewModel(application) {
 
     fun insertData(memo : MemoEntity) = viewModelScope.launch(Dispatchers.IO) {
         //레포지 쓰기전
-        Log.d("ghkrdls",memo.title)
         db.memoDa0().insert(memo)
     }
 

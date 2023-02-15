@@ -2,6 +2,8 @@ package com.example.memo_2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
 import com.example.memo_2.databinding.ActivityMainBinding
@@ -32,6 +34,7 @@ class MainActivity : AppCompatActivity() {
         memoList.addAll(helper.memoDao().getAll()) // db에 있는 모든 데이터를 빈 변수에 넣기
 
         memoAdapter = MemoAdapter(memoList) // 어댑터에 데이터 연결
+
 
         refreshAdapter()
 

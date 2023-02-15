@@ -1,6 +1,7 @@
 package com.example.memo_2
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.memo_2.databinding.MemoItemBinding
@@ -21,11 +22,13 @@ class MemoAdapter(val memoList : List<MemoEntity>) : RecyclerView.Adapter<MemoAd
         return memoList.size
     }
 
+
+
     override fun onBindViewHolder(holder: Holder, position: Int) {
         holder.setMemo(memoList.get(position))
     }
 
-    class Holder(val binding : MemoItemBinding) : RecyclerView.ViewHolder(binding.root){
+    inner class Holder(val binding : MemoItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun setMemo(memo : MemoEntity){
 

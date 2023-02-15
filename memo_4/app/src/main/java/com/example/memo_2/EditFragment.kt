@@ -47,16 +47,7 @@ class EditFragment : Fragment() {
                 }
 
             }
-//            addmemo.setOnClickListener {
-//                viewModel.removeData()
-//
-//            }
 
-//        binding.backarrow.setOnClickListener {
-//
-//            Navigation.findNavController(binding.root).navigate(R.id.action_editFragment_to_mainFragment)
-//
-//        }
 
         return binding.root
     }
