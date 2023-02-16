@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.method.TextKeyListener.clear
 import android.util.Log
+import android.view.View
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.room.Room
@@ -27,6 +28,7 @@ class MainActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(MemoViewModel::class.java)
         viewModel.getData()
+
 
         viewModel.memoList.observe(this,{
             viewModel.memoList
@@ -55,6 +57,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
             }
+
+
             addmemo.setOnClickListener {
                     viewModel.removeData()
 

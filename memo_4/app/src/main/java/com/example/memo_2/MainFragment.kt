@@ -19,6 +19,9 @@ import androidx.sqlite.db.SupportSQLiteCompat
 import com.example.memo_2.databinding.ActivityMainBinding
 import com.example.memo_2.databinding.FragmentMainBinding
 import com.example.memo_2.room.MemoEntity
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 
 class MainFragment : Fragment() {
@@ -26,7 +29,6 @@ class MainFragment : Fragment() {
     val binding by lazy { FragmentMainBinding.inflate(layoutInflater) }
     lateinit var viewModel:MemoViewModel
 
-//    private val items = MutableLiveData<List<MemoEntity>>()
 
     lateinit var mainActivity: MainActivity
 
@@ -54,7 +56,13 @@ class MainFragment : Fragment() {
         binding.rv.adapter = memoAdapter
         binding.rv.layoutManager = LinearLayoutManager(mainActivity)
 
-
+//        memoAdapter.setOnItemClickListener(object : MemoAdapter.OnItemClickListener{
+//            override fun onItemClick(v: View, data: MemoEntity, pos : Int) {
+//
+//                Log.d("wpqkf","aaaa")
+//            }
+//
+//        })
 
         viewModel.memoList.observe(viewLifecycleOwner,{
             viewModel.memoList
@@ -62,13 +70,12 @@ class MainFragment : Fragment() {
             memoAdapter.notifyDataSetChanged()
         })
 
-        memoAdapter.setOnItemClickListener(object : MemoAdapter.OnItemClickListener{
-            override fun onItemClick(v: View, data: MemoEntity, pos : Int) {
-
-                Log.d("wpqkf","aaaa")
-            }
+        viewModel.clickT.observe(viewLifecycleOwner,{
+            viewModel.clickEv()
 
         })
+
+
 
 
         binding.addmemo.setOnClickListener {

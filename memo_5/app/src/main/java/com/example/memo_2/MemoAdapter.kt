@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.memo_2.databinding.MemoItemBinding
-import com.example.memo_2.room.MemoEntity
 import java.text.SimpleDateFormat
 
 // 여기선 연결만 시켜주는 역할 이므로 Room관련 내용은 하나도 쓰이지 않음
@@ -24,7 +23,7 @@ class MemoAdapter(val memoList : List<MemoEntity>) : RecyclerView.Adapter<MemoAd
     }
 
     interface OnItemClickListener{
-        fun onItemClick(v: View, data: MemoEntity, pos : Int)
+        fun onItemClick(v:View, data: MemoEntity, pos : Int)
     }
     private var listener : OnItemClickListener? = null
     fun setOnItemClickListener(listener : OnItemClickListener) {
@@ -35,7 +34,7 @@ class MemoAdapter(val memoList : List<MemoEntity>) : RecyclerView.Adapter<MemoAd
         holder.setMemo(memoList.get(position))
     }
 
-    class Holder(val binding : MemoItemBinding) : RecyclerView.ViewHolder(binding.root){
+    inner class Holder(val binding : MemoItemBinding) : RecyclerView.ViewHolder(binding.root){
 
         fun setMemo(memo : MemoEntity){
 
@@ -45,7 +44,13 @@ class MemoAdapter(val memoList : List<MemoEntity>) : RecyclerView.Adapter<MemoAd
                 val date = SimpleDateFormat("yyyy/MM/dd hh:mm")
                 dateArea.text = date.format(memo.datetime)
 
-
+                val pos = adapterPosition
+                if(pos!= RecyclerView.NO_POSITION)
+                {
+                    clickArea.setOnClickListener {
+                        listener?.onItemClick(itemView,memo,pos)
+                    }
+                }
 
             }
         }
