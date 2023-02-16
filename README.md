@@ -43,3 +43,15 @@ RecyclerView는 ClickEvent를 가지고 있지 않아서 따로 만들어주어�
 적용 해보았는데 잘 작동한다. 그래서 문제는 ViewModel 과 LiveData를 사용한 RecyclerView에 ClickEvent를 적용하는데에서 문제가 있는 것 같다.<br>
 검색을 해보아도 예제가 잘 보이지않아서 혼자 해봐야 할 것같다. 
 
+## 7차
+
+6차 ClickEvent의 이슈를 해결하려고 이틀을 썼지만 해결할 수 없었다. <br>
+그래서 ViewModel과 LiveData를 포기하고 ClickEvent를 구현하였다. <br>
+다행히 화면 전환간 데이터 에러는 발생하지 않았다. <br>
+ClickEvent를 구현하여 메모 리스트에 있는 항목을 하나 클릭하면 그 메모의 내용이 보이는 Fragment로 넘어가도록 구현하였다.<br>
+Fragment간의 데이터 전달은 safeArgs를 사용하였다.<br>
+<br>
+이젠 메모 수정과 삭제기능을 구현하여야 한다. 여기서도 꽤 많은 시간이 소요될거같다.<br>
+이것만 끝내면 이번 프로젝트는 마무리가 될 것 같다.
+
+
