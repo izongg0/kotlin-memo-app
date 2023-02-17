@@ -44,7 +44,15 @@ class AddFragment : Fragment() {
 
 
 with(binding) {
+
+
     backarrow.setOnClickListener {
+
+            Navigation.findNavController(binding.root).navigate(R.id.action_addFragment_to_mainFragment)
+
+        }
+
+    saveBtn.setOnClickListener {
 
         helper = Room.databaseBuilder(mainActivity, RoomHelper::class.java, "room_db")
             .allowMainThreadQueries() // 공부할때만 쓴다.
@@ -65,8 +73,11 @@ with(binding) {
         }
 
     }
+    }
 
-}
+
+
+
 
 
 

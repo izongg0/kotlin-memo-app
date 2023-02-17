@@ -13,8 +13,10 @@ interface MemoDao {
     @Delete
     fun delete(memo:MemoEntity)
 
-//    @Query("DELETE FROM room_memo WHERE no = :userId")
-//    fun deleteByUserId(userId: Long)
+    @Query("DELETE FROM memo_tb WHERE no = :userId")
+    fun deleteByUserId(userId: Long?)
 
+    @Query("UPDATE memo_tb SET title =:title, content = :content, datetime = :datetime WHERE no =:no")
+    fun updateMemo(no : Long? ,title : String, content : String, datetime : Long)
 
 }

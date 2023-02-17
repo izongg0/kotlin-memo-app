@@ -23,6 +23,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:fontFamily="@font/ownglyph"
+            android:layout_marginTop="15dp"
+
             />
 
         <ImageView

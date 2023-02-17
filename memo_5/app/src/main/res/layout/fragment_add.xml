@@ -18,6 +18,7 @@
             android:textColor="@color/black"
             android:textSize="50sp"
             android:textStyle="bold"
+            android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
@@ -34,6 +35,15 @@
 
             android:src="@drawable/backarrow"
             app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/saveBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="12dp"
+            android:src="@drawable/saveicon"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
@@ -60,6 +70,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:fontFamily="@font/ownglyph"
+            android:textSize="25sp"
+
             />
 
         <EditText
@@ -71,6 +83,8 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/textView"
             android:gravity="top"
+            android:textSize="25sp"
+
             android:fontFamily="@font/ownglyph"
             />
 

@@ -41,7 +41,7 @@ class MemoAdapter(val memoList : List<MemoEntity>) : RecyclerView.Adapter<MemoAd
             with(binding){
 
                 titleArea.text = memo.title
-                val date = SimpleDateFormat("yyyy/MM/dd hh:mm")
+                val date = SimpleDateFormat("yyyy/MM/dd")
                 dateArea.text = date.format(memo.datetime)
 
                 val pos = adapterPosition

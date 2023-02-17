@@ -9,17 +9,7 @@
     android:id="@+id/clickArea"
     >
 
-<!--    <TextView-->
-<!--        android:id="@+id/no"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:layout_marginStart="10dp"-->
-<!--        android:text="no"-->
-<!--        android:textSize="20sp"-->
-<!--        app:layout_constraintBottom_toBottomOf="parent"-->
-<!--        app:layout_constraintStart_toStartOf="parent"-->
-<!--        app:layout_constraintTop_toTopOf="parent"-->
-<!--        app:layout_constraintVertical_bias="0.515" />-->
+
 
     <TextView
         android:id="@+id/titleArea"
@@ -29,7 +19,7 @@
         android:singleLine="false"
         android:text="제목"
         android:textColor="@color/black"
-        android:textSize="20sp"
+        android:textSize="22sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -38,13 +28,13 @@
 
     <TextView
         android:id="@+id/dateArea"
-        android:layout_width="65dp"
+        android:layout_width="70dp"
         android:layout_height="wrap_content"
         android:layout_margin="15dp"
         android:layout_marginEnd="24dp"
         android:layout_marginBottom="12dp"
         android:text="date"
-        android:textSize="10sp"
+        android:textSize="13sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:fontFamily="@font/ownglyph"
