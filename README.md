@@ -1,5 +1,6 @@
 # kotlin-memo-app
 코틀린을 이용하여 메모장 어플 만들기 
+### Room, ViewBinding, Coroutine, Navigation, SafeArgs, ViewModel, LiveData
 
 ![memoframe](https://user-images.githubusercontent.com/108528803/218311775-c5610f11-5dcb-4cc2-be1b-d5af245e8f76.jpg)
 
@@ -54,4 +55,13 @@ Fragment간의 데이터 전달은 safeArgs를 사용하였다.<br>
 이젠 메모 수정과 삭제기능을 구현하여야 한다. 여기서도 꽤 많은 시간이 소요될거같다.<br>
 이것만 끝내면 이번 프로젝트는 마무리가 될 것 같다.
 
+## 8차
+
+메모의 수정과 삭제기능을 구현하였다. <br>
+DB Query문만 적용하면 바로 구현되는 것이라 생각보다 금방 하였다.<br>
+마지막으로 코드정리좀 하고, Click Effect, Nav Animation 를 적용하고 , 폰트도 적용하였다.<br>
+그리고 Fragment Stack관리를 하여 메인화면에서 앱이 원할하게 종료되도록 하였다.<br>
+<br>
+ViewModel 과 LiveData를 실제 적용하지는 못했지만 시행착오를 겪으면서 어떻게 활용하는지는 알 수 있었다.<br>
+간단한 메모장이었지만 배운 Jetpack을 실제 앱을 만드는데 활용할 수 있게 되었다. <br>
 
