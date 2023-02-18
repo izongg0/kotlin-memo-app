@@ -35,6 +35,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:layout_margin="12dp"
+            android:background="@drawable/selector_view"
             />
 
         <ImageView
@@ -45,7 +46,8 @@
 
             android:src="@drawable/backarrow"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/selector_view"/>
 
 
         <TextView

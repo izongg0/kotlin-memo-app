@@ -20,11 +20,12 @@ import kotlinx.coroutines.withContext
 
 
 class MainFragment : Fragment() {
+    
+    
     val binding by lazy { FragmentMainBinding.inflate(layoutInflater) }
     lateinit var memoAdapter: MemoAdapter
     lateinit var helper: RoomHelper
-    val memoList = mutableListOf<MemoEntity>() // 빈 리스트 변수만들기
-
+    val memoList = mutableListOf<MemoEntity>() 
     lateinit var mainActivity: MainActivity
 
 
@@ -49,11 +50,12 @@ class MainFragment : Fragment() {
     ): View? {
 
 
-
-
         helper = Room.databaseBuilder(mainActivity, RoomHelper::class.java, "room_db")
             .allowMainThreadQueries() // 공부할때만 쓴다.
             .build()
+
+        memoList.clear()
+
 
         memoList.addAll(helper.memoDao().getAll()) // db에 있는 모든 데이터를 빈 변수에 넣기
 

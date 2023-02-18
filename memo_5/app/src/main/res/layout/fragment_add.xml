@@ -23,6 +23,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             android:fontFamily="@font/ownglyph"
+
             />
 
 
@@ -32,6 +33,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_margin="12dp"
+            android:background="@drawable/selector_view"
 
             android:src="@drawable/backarrow"
             app:layout_constraintStart_toStartOf="parent"
@@ -44,7 +46,8 @@
             android:layout_margin="12dp"
             android:src="@drawable/saveicon"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/selector_view"/>
 
 
         <TextView
@@ -71,6 +74,7 @@
             app:layout_constraintTop_toTopOf="parent"
             android:fontFamily="@font/ownglyph"
             android:textSize="25sp"
+            android:hint="제목을 입력하세요."
 
             />
 
@@ -85,6 +89,7 @@
             android:gravity="top"
             android:textSize="25sp"
 
+            android:hint="내용을 입력하세요."
             android:fontFamily="@font/ownglyph"
             />
 

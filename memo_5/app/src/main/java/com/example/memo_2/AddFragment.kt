@@ -27,9 +27,6 @@ class AddFragment : Fragment() {
         super.onAttach(context)
         mainActivity = context as MainActivity
 
-
-
-
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
