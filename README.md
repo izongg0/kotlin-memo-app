@@ -1,6 +1,6 @@
 # kotlin-memo-app
 코틀린을 이용하여 메모장 어플 만들기 
-### Jetpack : Room, ViewBinding, Coroutine, Navigation, SafeArgs, ViewModel, LiveData 사용
+### Jetpack : Room, ViewBinding, Coroutine, Navigation, SafeArgs, ViewModel, ViewModelScope, LiveData 사용
 
 <br>
 <br>
@@ -67,3 +67,14 @@ DB Query문만 적용하면 바로 구현되는 것이라 생각보다 금방 �
 ViewModel 과 LiveData를 실제 적용하지는 못했지만 시행착오를 겪으면서 어떻게 활용하는지는 알 수 있었다.<br>
 간단한 메모장이었지만 배운 Jetpack을 실제 앱을 만드는데 활용할 수 있게 되었다. <br>
 
+## 9차 - Real Finish
+
+8차에서 완료된 것에 ViewModel 과 LiveData를 추가하였다. <br>
+ViewModel과 LiveData를 적용했을 때 ClickEvent가 작동하지 않았던 이유가  RecyclerView Adapter의 notifydatasetchanged() 때문이었다.<br>
+notifydatasetchanged가 실행되면서 adapter에 적용되어있던 ClickEvent까지 초기화가 되었다. <br>
+ClickEvent까지 같이 동기화가 될 줄 알았는데 되지 않았다. <br>
+그래서 Adapter 에 연결된 메모 데이터의 전체 동기화가 아닌 변경된 메모데이터만 동기화되도록 DiffUtil을 사용하였다.<br>
+변경된 내용을 주고받는 submitList메서드를 사용하기위해 RecyclerView Adapter 을 ListAdapter로 변경하였고, <br>
+Adapter 내부에 DiffUtil을 구현하여 사용하였다. <br>
+결과적으로 모든 기능들이 정상작동 하였고, <br>
+처음 앱을 만들기 전 사용하고자했던 모든 Jetpack 기능들을 사용하여 메모앱을 완성하였다.
