@@ -2,6 +2,8 @@
 코틀린을 이용하여 메모장 어플 만들기 
 ### Jetpack : Room, ViewBinding, Coroutine, Navigation, SafeArgs, ViewModel, ViewModelScope, LiveData 사용
 
+### [Activity or Fragment로 이동](https://github.com/izongg0/kotlin-memo-app/tree/main/memo_Finish/app/src/main/java/com/example/memo_2)
+### [Layout으로 이동](https://github.com/izongg0/kotlin-memo-app/tree/main/memo_Finish/app/src/main/res/layout)
 <br>
 <br>
 
