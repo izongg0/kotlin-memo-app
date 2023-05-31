@@ -7,7 +7,6 @@
 <br>
 <br>
 
-![memoframe](https://user-images.githubusercontent.com/108528803/218311775-c5610f11-5dcb-4cc2-be1b-d5af245e8f76.jpg)
 
 ----
 ## 1차
